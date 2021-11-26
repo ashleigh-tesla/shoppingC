@@ -118,6 +118,7 @@ function displayCart() {
                 <span>${item.name}</span>
             </div>
             <div class="price">$${item.price},00</div>
+            <div class="quantity">
                 <ion-icon name="arrow-back-circle-outline"></ion-icon>
                 <span>${item.inCart}</span>
                 <ion-icon name="arrow-forward-circle-outline"></ion-icon>
