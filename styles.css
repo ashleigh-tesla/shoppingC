@@ -131,7 +131,7 @@ li a {
     width: 100%;
     max-width: 650px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     border-bottom: 4px solid lightgrey;
     margin: 0 auto;
 }
@@ -151,7 +151,6 @@ li a {
     width: 30%;
     border-bottom: 1px solid lightgrey;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 

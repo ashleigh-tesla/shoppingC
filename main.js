@@ -111,7 +111,7 @@ function displayCart() {
     if (cartItems && productContainer) {
         productContainer.innerHTML = ''
         Object.values(cartItems).map(item => {
-            productContainer.innerHTML = `
+            productContainer.innerHTML += `
             <div class="product">
                 <ion-icon name="close-circle"></ion-icon>
                 <img src="images/${item.tag}.jpg">
@@ -125,7 +125,7 @@ function displayCart() {
             </div>
             <div class="total">
                 $${item.inCart * item.price},00
-            </div>
+            </div>  
             `
         })
         productContainer.innerHTML += `
