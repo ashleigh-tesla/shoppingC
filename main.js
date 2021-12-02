@@ -99,6 +99,20 @@ function totalCost(product) {
     }
 }
 
+function incNumber() {
+    let productNumbers = localStorage.getItem('cartNumbers')
+    productNumbers = productNumbers + 1
+    localStorage.setItem("cartNumbers", JSON.stringify(productNumbers))
+    console.log("increment by one")
+}
+
+function decNumber() {
+    let productNumbers = localStorage.getItem('cartNumbers')
+    productNumbers = productNumbers - 1;
+    localStorage.setItem("cartNumbers", JSON.stringify(productNumbers))
+    console.log("decrement by one")
+}
+
 function displayCart() {
     let cartItems = localStorage.getItem('productsInCart')
     cartItems = JSON.parse(cartItems)
@@ -119,9 +133,9 @@ function displayCart() {
             </div>
             <div class="price">$${item.price},00</div>
             <div class="quantity">
-                <ion-icon name="arrow-back-circle-outline"></ion-icon>
+                <ion-icon name="arrow-back-circle-outline" onclick="decNumber()"></ion-icon>
                 <span>${item.inCart}</span>
-                <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+                <ion-icon name="arrow-forward-circle-outline" onclick="incNumber()"></ion-icon>
             </div>
             <div class="total">
                 $${item.inCart * item.price},00
